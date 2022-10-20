@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Laracon\Inventory\Providers;
 
+use Bakode\User\Infrastructure\Services\UserService;
 use Illuminate\Support\ServiceProvider;
 use Bakode\User\Contracts\UserServiceContract as UserServiceContract;
 
@@ -16,7 +17,7 @@ class UserServiceProvider extends ServiceProvider
      * @var array
      */
     public array $bindings = [
-        UserServiceContract::class => ProductService::class,
+        UserServiceContract::class => UserService::class,
     ];
 
     /**
